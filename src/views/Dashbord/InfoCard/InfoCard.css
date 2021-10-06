@@ -1,0 +1,25 @@
+.card{
+    background: #97979712;
+    padding: 2.5em;
+    width: 20em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3em;
+    border-radius: 10px;
+}
+.card img{
+    width: 5em;
+}
+
+.card-stats{
+    margin-left: 2em;
+}
+.card-weight{
+    font-weight: bold;
+    font-size: 2em;
+}
+.card-nutrient{
+    color: #74798C;
+    font-weight: bold;
+    margin-top: .5em;
+}

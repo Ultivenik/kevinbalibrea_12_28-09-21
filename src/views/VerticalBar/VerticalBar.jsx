@@ -1,5 +1,5 @@
 import React from 'react'
-import "./VaericalBar.css"
+import "./VerticalBar.css"
 import weight from '../../assets/icon-weight.png'
 import meditation from '../../assets/icon-meditation.png'
 import swim from '../../assets/icon-swim.png'
