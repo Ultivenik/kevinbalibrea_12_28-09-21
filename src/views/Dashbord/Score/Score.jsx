@@ -10,28 +10,18 @@ export default function Score() {
         todayScore(setScore)
     }, [])
 
-    const data = [
-        {
-            "uv": score,
-            "fill": "red",
-        },
-        // {
-        //     "uv": "100",
-        //     "fill": "#97979712"
-        // }
-    ]
+    const data = [score]
  
 console.log(score);
     return (
         <ResponsiveContainer width={"32%"} height={200}>
-            <RadialBarChart startAngle={-250} endAngle={360} style={{background:"#97979712", borderRadius:"7px"}} cx="50%" cy="50%" innerRadius="70%" barSize={15} data={data} >
-                <Label dataKey='uv' position="center" fill="black" />
+            <RadialBarChart startAngle={0} endAngle={360}  style={{background:"#97979712", borderRadius:"7px"}} cx="50%" cy="50%" innerRadius="70%" barSize={15} data={data} >
+                <Label dataKey='score' position="center" fill="black" />
                 <RadialBar
-                    // minAngle={15}
-                    dataKey="uv"
+                    // minAngle={180}
+                    dataKey="todayScoreformatted"
                     fill="red"
-                    stroke="blue"
-                    background
+                    background={true}
                 />
             </RadialBarChart>
         </ResponsiveContainer>

@@ -6,7 +6,7 @@ export const userGlobalInformation = async () =>{
 }
 
 export const todayScore = async (score) =>{
-    const request = await axios.get("http://localhost:3000/user/12")
+    const request = await userGlobalInformation()
     const data = request.data.data
     const todayScoreformatted = data.todayScore * 100
     return score({...data, todayScoreformatted: todayScoreformatted})
