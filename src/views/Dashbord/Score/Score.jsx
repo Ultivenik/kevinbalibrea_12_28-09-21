@@ -20,16 +20,14 @@ export default function Score() {
         //     "fill": "#97979712"
         // }
     ]
-    const renderCustomBarLabel = ({ value }) => {
-        return <text fill="#000" textAnchor="middle">{`value: ${score.todayScoreformatted} % de votre objectif`}</text>;
-    };
+ 
 console.log(score);
     return (
         <ResponsiveContainer width={"32%"} height={200}>
             <RadialBarChart startAngle={-250} endAngle={360} style={{background:"#97979712", borderRadius:"7px"}} cx="50%" cy="50%" innerRadius="70%" barSize={15} data={data} >
                 <Label dataKey='uv' position="center" fill="black" />
                 <RadialBar
-                    minAngle={15}
+                    // minAngle={15}
                     dataKey="uv"
                     fill="red"
                     stroke="blue"
