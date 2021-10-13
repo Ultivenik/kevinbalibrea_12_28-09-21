@@ -3,12 +3,12 @@
     background: #000;
     display: flex;
     flex-direction: column;
-    width: 8em;
-    height: 100vh;
+    width: 6em;
+    height: 100%;
     color: #fff;
     align-items: center;
     position: absolute;
-    top: 6em;
+    top: 5.4em;
 }
 .vertical-bar nav{
     margin: auto;
@@ -16,7 +16,7 @@
     flex-direction: column;
 }
 .vertical-bar img{
-    width: 4.2em;
+    width: 3.2em;
     margin: .5em auto;
 }
 .vertical-bar span{
@@ -24,4 +24,5 @@
     display: block;
     margin: auto 0;
     width: max-content;
+    font-size: 0.6em;
 }

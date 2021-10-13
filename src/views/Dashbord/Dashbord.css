@@ -1,8 +1,23 @@
 .dashbord {
-    margin-left: 15em;
+    margin-left: 10em;
 }
+
+.stats{
+    width: 70%;
+}
+
 .info-cards{
-    position: absolute;
-    right: 4%;
-    top: 31%;
+    width: 27%;
+}
+.sessions{
+    display: flex;
+    margin-top: 3em;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.intensity-average-score-chart{
+    display: flex;
+    margin-top: 6.5em;
+    justify-content: space-between;
+    width: 100%;
 }

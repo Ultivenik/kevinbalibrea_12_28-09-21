@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react/cjs/react.development'
-import { Legend, RadialBar, RadialBarChart } from 'recharts'
+import { Label, RadialBar, RadialBarChart, ResponsiveContainer } from 'recharts'
 import { todayScore } from '../../../services/api'
 
 export default function Score() {
@@ -10,25 +10,32 @@ export default function Score() {
         todayScore(setScore)
     }, [])
 
+    const data = [
+        {
+            "uv": score,
+            "fill": "red",
+        },
+        // {
+        //     "uv": "100",
+        //     "fill": "#97979712"
+        // }
+    ]
+    const renderCustomBarLabel = ({ value }) => {
+        return <text fill="#000" textAnchor="middle">{`value: ${score.todayScoreformatted} % de votre objectif`}</text>;
+    };
+console.log(score);
     return (
-        <div>
-            {/* <RadialBarChart width={350} height={400} cx="50%" cy="50%" innerRadius="10%" outerRadius="80%" data={score} startAngle={360}
-            endAngle={0}>
-                <RadialBar minAngle={15} label={{ fill: '#666', position:"center"}} background legendType="circle" dataKey="todayScore" />
-            </RadialBarChart> */}
-        <RadialBarChart 
-            width={730} 
-            height={250} 
-            innerRadius="10%" 
-            outerRadius="80%" 
-            data={score} 
-            startAngle={360} 
-            endAngle={0}
-            fill="black"
-            >
-            <RadialBar minAngle={15} label={{ fill: '#666', position: 'center' }} background clockWise={true} dataKey='todayScore' />
-            <Legend iconSize={10} width={120} height={140} layout='vertical' verticalAlign='middle' align="right" />
-        </RadialBarChart>
-        </div>
+        <ResponsiveContainer width={"32%"} height={200}>
+            <RadialBarChart startAngle={-250} endAngle={360} style={{background:"#97979712", borderRadius:"7px"}} cx="50%" cy="50%" innerRadius="70%" barSize={15} data={data} >
+                <Label dataKey='uv' position="center" fill="black" />
+                <RadialBar
+                    minAngle={15}
+                    dataKey="uv"
+                    fill="red"
+                    stroke="blue"
+                    background
+                />
+            </RadialBarChart>
+        </ResponsiveContainer>
     )
 }

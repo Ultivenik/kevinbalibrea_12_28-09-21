@@ -12,7 +12,7 @@ export default function UserName() {
     return (
         <React.Fragment>
             <h1 className="main-title">Bonjour <span className="name"> {name} </span></h1>
-            <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+            <p>Félicitation ! Vous avez explosé vos objectifs hier <span aria-label="emoji applaudissement" role="img">👏</span></p>
         </React.Fragment>
     )
 }

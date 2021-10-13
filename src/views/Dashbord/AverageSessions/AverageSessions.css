@@ -1,0 +1,7 @@
+.line-parent g tspan{
+    fill: rgba(255, 255, 255, 0.419);
+}
+.line-parent .recharts-surface{
+    width: 73%;
+    margin: 1.7em;
+}

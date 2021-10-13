@@ -41,15 +41,22 @@ export default function Dashboard() {
     return (
         <section className="dashbord">
             <UserName />
-            <Activity />
-            <Intensity />
-            <Score />
-            <AverageSessions />
-            <div className= "info-cards">
-                <InfoCard info = "Calories" weight={calorieCount + "kCal"}/>
-                <InfoCard info = "Proteines" weight={proteinCount + "g"}/>
-                <InfoCard info = "Glucides" weight={carbohydrateCount + "g"}/>
-                <InfoCard info = "Lipides" weight={lipidCount + "g"}/>
+            <div className="sessions">
+                <div className="stats">
+                    <Activity />
+                    <div className="intensity-average-score-chart">
+                        <AverageSessions />
+                        <Intensity />
+                        <Score />
+                    </div>
+                </div>
+                <div className= "info-cards">
+                    <InfoCard info = "Calories" weight={calorieCount + "kCal"}/>
+                    <InfoCard info = "Proteines" weight={proteinCount + "g"}/>
+                    <InfoCard info = "Glucides" weight={carbohydrateCount + "g"}/>
+                    <InfoCard info = "Lipides" weight={lipidCount + "g"}/>
+                </div>
+
             </div>
         </section>
     )

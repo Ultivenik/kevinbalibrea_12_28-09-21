@@ -1,25 +1,26 @@
 .card{
     background: #97979712;
-    padding: 2.5em;
-    width: 20em;
+    padding: 1.9em;
+    width: 65%;
     display: flex;
     align-items: center;
-    margin-bottom: 3em;
-    border-radius: 10px;
+    margin-bottom: 1.9em;
+    border-radius: 7px;
 }
 .card img{
-    width: 5em;
+    width: 3.5em;
 }
 
 .card-stats{
-    margin-left: 2em;
+    margin-left: 1.3em;
 }
 .card-weight{
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1em;
 }
 .card-nutrient{
     color: #74798C;
     font-weight: bold;
     margin-top: .5em;
+    font-size: .8em;
 }
