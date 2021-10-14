@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback } from 'react'
+import { useEffect, useCallback, useState } from 'react'
 
 
 export default function Loader({load, children}) {

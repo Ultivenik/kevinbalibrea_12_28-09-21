@@ -1,4 +1,7 @@
 import axios from 'axios'
+// import { useCallback } from 'react'
+// import React from 'react'
+// import Loader from './Loader.js'
 
 export const userGlobalInformation = async () =>{
     const request = await axios.get("http://localhost:3000/user/12")
@@ -8,8 +11,9 @@ export const userGlobalInformation = async () =>{
 export const todayScore = async (score) =>{
     const request = await userGlobalInformation()
     const data = request.data.data
-    const todayScoreformatted = data.todayScore * 100
-    return score({...data, todayScoreformatted: todayScoreformatted})
+    // const todayScoreformatted = data.todayScore * 100
+
+    return score(data.todayScore * 100)
 }
 
 export const userActivityInformation = async (activity) => {
@@ -39,3 +43,17 @@ export const userKindInformation = async (kind) =>{
 
     return kind(request.data.data.kind)
 }
+
+// export const CallService = () => {
+//     const loadData = useCallback(async () => {
+//         userGlobalInformation()
+//         todayScore()
+//         userActivityInformation()
+//         userAverageSessionsInformation()
+//         userPerformanceInformation()
+//         userKindInformation()
+//     })
+//     return <Loader load={loadData} >
+            
+//     </Loader>
+// }
