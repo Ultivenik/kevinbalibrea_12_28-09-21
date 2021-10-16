@@ -6,12 +6,18 @@ import fat from './../../../assets/fat-icon.png'
 import './InfoCard.css'
 
 export default function InfoCard(props) {
+
     return (
-        <div className="card">
-            <img src={props.info === "Calories" ? calories : props.info === "Proteines" ? protein : props.info === "Glucides" ? carbs : fat} alt="info nutriment" />
+        <div id={props.id} className="card">
+            <img
+                src={props.info === "Calories" ? calories : props.info === "Proteines" ? protein : props.info === "Glucides" ? carbs : fat}
+                alt="info nutriment"
+            />
             <div className="card-stats">
-                <p className="card-weight">{props.weight}</p>
-                <p className="card-nutrient">{props.info}</p>
+                <p className="card-weight">
+                    {props.weight} {props.info === "Calories" ? "Kcal" : "g"}
+                </p>
+                <p className="card-nutrient">{props.info} </p>
             </div>
         </div>
     )

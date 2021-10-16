@@ -1,0 +1,23 @@
+.radial-wrapper{
+    position: absolute;
+    left: 79.7%;
+    z-index: 1;
+    top: 76%;
+    width: 4em;
+}
+.radial-results{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+.radial-text{
+    color: #74798C;
+    font-weight: 500;
+    font-size: .8em;
+}
+
+@media screen and (min-width:1500px) {
+    .radial-wrapper{
+        left: 81.7%;
+    }
+}

@@ -1,0 +1,9 @@
+.radial-title{
+    position: absolute;
+    z-index: 1;
+    left: 71%;
+    top: 66%;
+    color:#20253A;
+    font-weight:500;
+    font-size:.8em
+}

@@ -5,8 +5,7 @@ import meditation from '../../assets/icon-meditation.png'
 import swim from '../../assets/icon-swim.png'
 import bike from '../../assets/icon-bike.png'
 
-export default function VerticalBar() {
-    const copyright = "Copyright, SportSee 2020"
+export default function VerticalBar(props) {
     return (
         <section className="vertical-bar">
             <nav>
@@ -15,7 +14,7 @@ export default function VerticalBar() {
                 <img src={bike} alt={"icone" + bike} />
                 <img src={weight} alt={"icone" + weight} />
             </nav>
-            <span>{copyright}</span>
+            <span>{props.copyright}</span>
         </section>
     )
 }

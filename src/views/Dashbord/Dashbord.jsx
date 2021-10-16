@@ -9,38 +9,15 @@ import Score from './Score/Score'
 import AverageSessions from './AverageSessions/AverageSessions'
 
 export default function Dashboard() {
-    const [calorieCount, setcalorieCount] = useState()
-    const [proteinCount, setproteinCount] = useState()
-    const [carbohydrateCount, setcarbohydrateCount] = useState()
-    const [lipidCount, setlipidCount] = useState()
+    const [foodInfo, setFoodInfo] = useState([])
 
-    useEffect(()=>{
-        userGlobalInformation(setcalorieCount).then(response=>{
-            setcalorieCount(response.data.data.keyData.calorieCount)
-        })
-    }, [])
-
-    useEffect(()=>{
-        userGlobalInformation(setproteinCount).then(response=>{
-            setproteinCount(response.data.data.keyData.proteinCount)
-        })
-    }, [])
-
-    useEffect(()=>{
-        userGlobalInformation(setcarbohydrateCount).then(response=>{
-            setcarbohydrateCount(response.data.data.keyData.carbohydrateCount)
-        })
-    }, [])
-
-    useEffect(()=>{
-        userGlobalInformation(setlipidCount).then(response=>{
-            setlipidCount(response.data.data.keyData.lipidCount)
-        })
+    useEffect(() => {
+        userGlobalInformation(setFoodInfo)
     }, [])
 
     return (
         <section className="dashbord">
-            <UserName />
+            <UserName hello="Bonjour" congrats="Félicitation ! Vous avez explosé vos objectifs hier" emoji="👏"/>
             <div className="sessions">
                 <div className="stats">
                     <Activity />
@@ -51,10 +28,15 @@ export default function Dashboard() {
                     </div>
                 </div>
                 <div className= "info-cards">
-                    <InfoCard info = "Calories" weight={calorieCount + "kCal"}/>
-                    <InfoCard info = "Proteines" weight={proteinCount + "g"}/>
-                    <InfoCard info = "Glucides" weight={carbohydrateCount + "g"}/>
-                    <InfoCard info = "Lipides" weight={lipidCount + "g"}/>
+                    {
+                        foodInfo.map((item, key)=>{
+                            return <InfoCard
+                                id={key}
+                                key={key}
+                                weight={item}
+                                info={key === 0 ? "Calories" : key === 1 ? "Proteines" : key === 2 ? "Glucides" : "Lipides"} />
+                        })
+                    }
                 </div>
 
             </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react'
-import {BarChart, Bar, YAxis, XAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Label} from 'recharts'
+import { BarChart, Bar, YAxis, XAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 import { userActivityInformation } from '../../../services/api'
 import './Activity.css'
 
@@ -10,14 +10,11 @@ export default function Activity() {
         userActivityInformation(setActivity)
     }, [])
 
-    const renderLegend = ()=>{
-        return "Activité quotidienne"
-    }
-
     return (
+        <React.Fragment>
+        <h2 className="activity-bar">Activité quotidienne</h2>
         <ResponsiveContainer width={"100%"} height= {"40%"}>
-            <BarChart className="barchart" barSize={8} data={activity} style={{ background:"#97979712", padding:"4em 0 1em 0em", borderRadius:"7px"}} barGap={"10%"} >
-                <Label content={renderLegend} />
+            <BarChart className="barchart" barSize={8} data={activity} style={{ background:"#FBFBFB", padding:"4em 0 1em 0em", borderRadius:"7px"}} barGap={"10%"} >
                 <CartesianGrid vertical={false} strokeDasharray="3 3" />
                 <XAxis tickSize={20} tickLine={false}/>
                 <YAxis dataKey="calories" width={50} tickCount={3} axisLine={false} tickLine={false} orientation="right" />
@@ -29,5 +26,6 @@ export default function Activity() {
                 <Legend verticalAlign="top" align="right"  wrapperStyle={{top:"1em", right:"0.5em"}} iconSize={10} />
             </BarChart>
         </ResponsiveContainer>
+        </React.Fragment>
     )
 }

@@ -11,7 +11,7 @@ export default function Intensity() {
 
     return (
         <ResponsiveContainer  width={"32%"} height={200}>
-            <RadarChart outerRadius={"80%"} cx="50%" style={{background:"#282D30", borderRadius:"7px", fontSize:"0.6em" }} data={performances} fill="white">
+            <RadarChart outerRadius={"70%"} cx="50%" style={{background:"#282D30", borderRadius:"7px", fontSize:"0.6em" }} data={performances} fill="white">
                 <PolarGrid />
                 <PolarAngleAxis dataKey="kind" />
                 <Radar dataKey="value" fill="#FF0101" fillOpacity={0.6} />

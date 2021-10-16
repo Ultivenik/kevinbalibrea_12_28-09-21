@@ -3,15 +3,26 @@ import axios from 'axios'
 // import React from 'react'
 // import Loader from './Loader.js'
 
-export const userGlobalInformation = async () =>{
+export const userGlobalInformation = async (globalInfo) =>{
     const request = await axios.get("http://localhost:3000/user/12")
-    return request
+    const nutrient = request.data.data.keyData
+    return globalInfo([
+        nutrient.calorieCount,
+        nutrient.carbohydrateCount,
+        nutrient.lipidCount,
+        nutrient.proteinCount,
+    ])
+}
+
+export const userNameInformation = async (name) =>{
+    const request = await axios.get("http://localhost:3000/user/12")
+    const firstName = request.data.data.userInfos.firstName
+    return name(firstName)
 }
 
 export const todayScore = async (score) =>{
-    const request = await userGlobalInformation()
+    const request = await axios.get("http://localhost:3000/user/12")
     const data = request.data.data
-    // const todayScoreformatted = data.todayScore * 100
 
     return score(data.todayScore * 100)
 }
@@ -38,22 +49,4 @@ export const userPerformanceInformation = async (performances) =>{
     return performances(data.map(item=> {return {...item, kind: kind[item.kind]}} ))
 }
 
-export const userKindInformation = async (kind) =>{
-    const request = await axios.get("http://localhost:3000/user/12/performance")
 
-    return kind(request.data.data.kind)
-}
-
-// export const CallService = () => {
-//     const loadData = useCallback(async () => {
-//         userGlobalInformation()
-//         todayScore()
-//         userActivityInformation()
-//         userAverageSessionsInformation()
-//         userPerformanceInformation()
-//         userKindInformation()
-//     })
-//     return <Loader load={loadData} >
-            
-//     </Loader>
-// }

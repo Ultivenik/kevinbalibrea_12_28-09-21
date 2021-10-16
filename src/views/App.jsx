@@ -1,5 +1,4 @@
 import React from 'react'
-// import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Navbar from './Navbar/Navbar'
 import VerticalBar from './VerticalBar/VerticalBar'
 import Dashbord from './Dashbord/Dashbord'
@@ -8,9 +7,9 @@ import Dashbord from './Dashbord/Dashbord'
 export default function App() {
     return (
         <React.Fragment>
-            <Navbar path=""/>
+            <Navbar links={["Accueil", "Profil", "Réglage", "Communauté"]} />
             <main>
-                <VerticalBar />
+                <VerticalBar copyright="Copyright, SportSee 2020" />
                 <Dashbord />
             </main>
         </React.Fragment>
