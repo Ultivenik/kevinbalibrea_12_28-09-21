@@ -19,8 +19,6 @@ export default function Activity() {
                 <XAxis tickSize={20} tickLine={false}/>
                 <YAxis dataKey="calories" width={50} tickCount={3} axisLine={false} tickLine={false} orientation="right" />
                 <Tooltip formatter={(value, name, props) => ( [value, name=null, props] )} separator={null} labelStyle={{display:"none"}} itemStyle={{background:"red", color:"white", padding:"1.3em 1em", fontSize:".7em"}} contentStyle={{background:"red", border:0}} />
-                {/* <Bar name="Activité quotidienne" dataKey="Activité quotidienne" fill="transparent"  position="left"/> */}
-                {/* <Label name="Activité quotidienne" position="top" value="Activité quotidienne"/> */}
                 <Bar name="Poids (kg)" legendType="circle" unit="kg" dataKey="kilogram" fill="#282D30" radius={[10,10,0,0]} />
                 <Bar name="Calories brûlées (kCal)" legendType="circle" unit="Kcal" dataKey="calories" fill="#E60000" radius={[10,10,0,0]} />
                 <Legend verticalAlign="top" align="right"  wrapperStyle={{top:"1em", right:"0.5em"}} iconSize={10} />

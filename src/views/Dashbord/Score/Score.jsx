@@ -19,17 +19,33 @@ export default function Score() {
 
     return (
         <React.Fragment>
-            <span className="radial-title">Score</span>
-            <CustomLabel data={score} />
+            <h2 className="radial-title">Score</h2>
+            <CustomLabel
+                data={score +"%"}
+                classWrapper="radial-wrapper"
+                classValue="radial-results"
+                classSpanValue="radial-text"
+                spanValue={"de votre objectif"}
+            />
             <ResponsiveContainer width={"32%"} height={200}>
-                <RadialBarChart startAngle={-210} endAngle={360} style={{background:"#FBFBFB"}} cx="50%" cy="50%" innerRadius="70%" barSize={30} data={data} >
+                <RadialBarChart
+                    startAngle={-210}
+                    endAngle={360}
+                    style={{background:"#FBFBFB"}}
+                    cx="50%"
+                    cy="50%"
+                    innerRadius="70%"
+                    barSize={30}
+                    data={data}
+                >
                     <RadialBar
                         minAngle={0}
                         clockWise
                         cornerRadius={12}
                         dataKey="score"
                         fill="red"
-                        background/>
+                        background
+                    />
                     <PolarAngleAxis type="number" domain={[0, 100]}  tick={false} />
                 </RadialBarChart>
             </ResponsiveContainer>

@@ -1,3 +1,13 @@
+.average-sessions{
+    color: rgba(255, 255, 255, 0.419);
+    font-weight:500;
+    font-size:.8em;
+    position: absolute;
+    z-index: 1;
+    width: 9em;
+    top: 8%;
+    left: 4%;
+}
 .line-parent g tspan{
     fill: rgba(255, 255, 255, 0.419);
 }

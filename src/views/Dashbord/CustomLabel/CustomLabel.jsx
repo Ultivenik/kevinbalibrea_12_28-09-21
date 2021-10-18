@@ -1,13 +1,12 @@
 import React from 'react'
-import  './CustomLabel.css'
 
 export default function CustomLabel(props) {
     return (
-        <div className="radial-wrapper">
-            <p className="radial-results">
-               {props.data} %
+        <div className={props.classWrapper}>
+            <p className={props.classValue}>
+               {props.data}
             </p>
-            <p className="radial-text">de votre objectif</p>
+            <p className={props.classSpanValue}>{props.spanValue} </p>
         </div>
     )
 }
