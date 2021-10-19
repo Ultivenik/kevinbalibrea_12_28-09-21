@@ -1,16 +1,22 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.png'
 import './NavBar.css'
 
-export default function Navbar(props) {
+export default function Navbar() {
+    const links = ["Accueil", "Profil", "Réglage", "Communauté"]
     return (
         <header className="header">
             <nav className="nav">
-                <img src={logo} alt="Logo" />
+                <Link to="/">
+                    <img src={logo} alt="Logo" />
+                </Link>
                 <ul className="nav-links">
-                    {props.links.map((link, key) =>
+                    {links.map((link, key) =>
                         <li key={key}>
-                            {link}
+                            <Link to={"/" + link}>
+                                {link}
+                            </Link>
                         </li>
                     )}
                 </ul>

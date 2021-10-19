@@ -9,7 +9,7 @@
 }
 .radial-wrapper{
     position: absolute;
-    left: 79.7%;
+    left: 79%;
     z-index: 1;
     top: 35%;
     width: 4em;
@@ -23,6 +23,8 @@
     color: #74798C;
     font-weight: 500;
     font-size: .8em;
+    text-align: center;
+    line-height: 1.6;
 }
 
 @media screen and (min-width:1500px) {

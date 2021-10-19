@@ -1,12 +1,14 @@
 import React, {useState, useEffect} from 'react'
-import { userNameInformation } from '../../../services/api'
+import { globalAccesUserInfo } from '../../../services/api'
 import './Username.css'
 
 export default function UserName(props) {
     const [name, setName] = useState()
 
     useEffect(() => {
-        userNameInformation(setName)
+        globalAccesUserInfo().then(response =>{
+            setName(response.firstName)
+        })
     }, [])
 
     return (

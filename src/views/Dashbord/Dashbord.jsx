@@ -3,7 +3,7 @@ import UserName from './UserName/UserName'
 import './Dashbord.css'
 import Activity from './Activity/Activity'
 import InfoCard from './InfoCard/InfoCard'
-import { userGlobalInformation } from '../../services/api'
+import { globalAccesUserInfo } from '../../services/api'
 import Intensity from './Intensity/Intensity'
 import Score from './Score/Score'
 import AverageSessions from './AverageSessions/AverageSessions'
@@ -12,7 +12,9 @@ export default function Dashboard() {
     const [foodInfo, setFoodInfo] = useState([])
 
     useEffect(() => {
-        userGlobalInformation(setFoodInfo)
+        globalAccesUserInfo().then(response=>{
+            setFoodInfo(response.nutrient)
+        })
     }, [])
 
     return (

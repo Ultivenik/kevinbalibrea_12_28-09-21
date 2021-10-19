@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react/cjs/react.development'
 import { PolarAngleAxis, RadialBar, RadialBarChart, ResponsiveContainer } from 'recharts'
-import { todayScore } from '../../../services/api'
+import { globalAccesUserInfo } from '../../../services/api'
 import CustomLabel from '../CustomLabel/CustomLabel'
 import './Score.css'
 
@@ -9,12 +9,13 @@ export default function Score() {
     const [score, setScore] = useState()
 
     useEffect(() => {
-        todayScore(setScore)
+        globalAccesUserInfo().then(response=>{
+            setScore(response.score)
+        })
     }, [])
 
     const data = [{
         "score": score,
-        "percent": 100
     }]
 
     return (

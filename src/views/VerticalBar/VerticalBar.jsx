@@ -4,17 +4,23 @@ import weight from '../../assets/icon-weight.png'
 import meditation from '../../assets/icon-meditation.png'
 import swim from '../../assets/icon-swim.png'
 import bike from '../../assets/icon-bike.png'
+import { Link } from 'react-router-dom'
 
-export default function VerticalBar(props) {
+export default function VerticalBar() {
+    const icons = [meditation, swim, bike, weight]
+    const copyright = "Copyright, SportSee 2020"
     return (
         <section className="vertical-bar">
             <nav>
-                <img src={meditation} alt={"icone" + meditation} />
-                <img src={swim} alt={"icone" + swim} />
-                <img src={bike} alt={"icone" + bike} />
-                <img src={weight} alt={"icone" + weight} />
+                {icons.map((icon, key) =>{
+                    return (
+                        <Link key={key} to={"/" + icon}>
+                            <img src={icon} alt={"icone" + key} />
+                        </Link>
+                    )
+                })}
             </nav>
-            <span>{props.copyright}</span>
+            <span>{copyright}</span>
         </section>
     )
 }

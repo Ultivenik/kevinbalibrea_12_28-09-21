@@ -7,7 +7,9 @@ export default function AverageSessions() {
     const [sessions, setSessions] = useState()
 
     useEffect(() => {
-        userAverageSessionsInformation(setSessions)
+        userAverageSessionsInformation().then(response =>{
+            setSessions(response)
+        })
     }, [])
 
     return (

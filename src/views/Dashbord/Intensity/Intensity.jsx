@@ -6,7 +6,9 @@ export default function Intensity() {
     const [performances, setPerformances] = useState()
 
     useEffect(() => {
-        userPerformanceInformation(setPerformances)
+        userPerformanceInformation().then(response =>{
+            setPerformances(response)
+        })
     }, [])
 
     return (
