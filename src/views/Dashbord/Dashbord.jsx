@@ -8,6 +8,10 @@ import Intensity from './Intensity/Intensity'
 import Score from './Score/Score'
 import AverageSessions from './AverageSessions/AverageSessions'
 
+/**
+ *  dashboard page component
+ * @component
+ */
 export default function Dashboard() {
     const [foodInfo, setFoodInfo] = useState([])
 
@@ -16,7 +20,6 @@ export default function Dashboard() {
             setFoodInfo(response.nutrient)
         })
     }, [])
-
     return (
         <section className="dashbord">
             <UserName hello="Bonjour" congrats="Félicitation ! Vous avez explosé vos objectifs hier" emoji="👏"/>
@@ -36,11 +39,11 @@ export default function Dashboard() {
                                 id={key}
                                 key={key}
                                 weight={item}
-                                info={key === 0 ? "Calories" : key === 1 ? "Proteines" : key === 2 ? "Glucides" : "Lipides"} />
+                                info={key === 0 ? "Calories" : key === 1 ? "Proteines" : key === 2 ? "Glucides" : "Lipides"}
+                            />
                         })
                     }
                 </div>
-
             </div>
         </section>
     )

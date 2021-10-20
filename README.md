@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Project 12 SportSee
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1. General informations
 
-## Available Scripts
+To use this project you have to use Docker to create a container project, run the API and fetching datas. In this documentation, we will see several methods to launch the project easily.
 
-In the project directory, you can run:
+## 2. Project
 
-### `yarn start`
+### 2.1 Setup the project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Fork the repository
+- Clone it on your computer.
+- The yarn or npm command will allow you to install the dependencies (yarn install or npm install).
+- The yarn dev command will allow you to run the micro API.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 2.2 Prerequisites
 
-### `yarn test`
+- [Docker desktop](https://www.docker.com/products/docker-desktop)
+- [NodeJS (**version 14**)](https://nodejs.org/en/)
+- [yarn](https://yarnpkg.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2.3 Starting the project
 
-### `yarn build`
+First, use the `cd .\P9-front-end-dashboard\` (or just typing `cd .p9` and `tab`), to be in the micro API file and run the commands which follow.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- The `docker image build --no-cache -t micro-api .` command will allow you to build your image.
+- The `docker container run --name micro-api -p 3000:3000 -dt micro-api yarn` command will allow you to create your Docker container and run your image on port 3000.
+- The `docker container stop micro-api` command will allow you to stop your micro-api.
+- The `docker container rm micro-api` command will allow you to delete your micro-api container.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2.4 VsCode and container
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you have VScode you can open two terminal.
+- In the first, you can use the `cd .\P9-front-end-dashboard\` (or just typing `cd .p9` and `tab`), to be in the micro API file and run the `yarn dev` command to run the micro API
+- In the second one, use the `npm run start` command only to run the project. it will run in `localhost:3001`
 
-### `yarn eject`
+## 3. Endpoint
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 3.1 Possible endpoints
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project includes four endpoints that you will be able to use:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- `http://localhost:3000/user/${userId}` - retrieves information from a user. This first endpoint includes the user id, user information (first name, last name and age), the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
+- `http://localhost:3000/user/${userId}/activity` - retrieves a user's activity day by day with kilograms and calories.
+- `http://localhost:3000/user/${userId}/average-sessions` - retrieves the average sessions of a user per day. The week starts on Monday.
+- `http://localhost:3000/user/${userId}/performance` - retrieves a user's performance (energy, endurance, etc.).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+**/!\ Warning /!\, currently only two users have been mocked. They have userId 12 and 18 respectively. We ONLY use the userId 12 datas for this project.**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 3.2 Examples of queries
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `http://localhost:3000/user/12/performance` - Retrieves the performance of the user with id 12
+- `http://localhost:3000/user/18` - Retrieves user 18's main information.
 
-### Code Splitting
+## 4. Screen
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The project is not responsive yet, it contain some medias queries for large screens but it work especially for 1024x780 screens.
 
-### Analyzing the Bundle Size
+## 5. Error
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+All links are not availiable yet, they will be implemented with the other pages. For now, they all redirect to the error page of the app. Only the logo redirect to the home page.

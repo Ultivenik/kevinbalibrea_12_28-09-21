@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart, ResponsiveContainer } from 'recharts'
 import { userPerformanceInformation } from '../../../services/api'
 
+/**
+ * radar chart intensity component
+ * @component
+ */
 export default function Intensity() {
     const [performances, setPerformances] = useState()
 
@@ -16,7 +20,7 @@ export default function Intensity() {
             <RadarChart
                 outerRadius={"70%"}
                 cx="50%"
-                style={{background:"#282D30", borderRadius:"7px", fontSize:"0.6em" }}
+                style={{background:"#282D30", borderRadius:"5px", fontSize:"0.6em" }}
                 data={performances}
                 fill="white"
             >

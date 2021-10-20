@@ -3,6 +3,10 @@ import { BarChart, Bar, YAxis, XAxis, CartesianGrid, Tooltip, Legend, Responsive
 import { userActivityInformation } from '../../../services/api'
 import './Activity.css'
 
+/**
+ *  Activity graph component
+ * @component
+ */
 export default function Activity() {
     const [activity, setActivity] = useState()
 

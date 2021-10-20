@@ -1,10 +1,14 @@
 import React from 'react'
 import { useState, useEffect } from 'react/cjs/react.development'
-import { PolarAngleAxis, RadialBar, RadialBarChart, ResponsiveContainer } from 'recharts'
+import { Customized, PolarAngleAxis, RadialBar, RadialBarChart, ResponsiveContainer } from 'recharts'
 import { globalAccesUserInfo } from '../../../services/api'
 import CustomLabel from '../CustomLabel/CustomLabel'
 import './Score.css'
 
+/**
+ * radial bar score component
+ * @component
+ */
 export default function Score() {
     const [score, setScore] = useState()
 
@@ -19,7 +23,7 @@ export default function Score() {
     }]
 
     return (
-        <React.Fragment>
+        <div className="radial-container">
             <h2 className="radial-title">Score</h2>
             <CustomLabel
                 data={score +"%"}
@@ -28,11 +32,10 @@ export default function Score() {
                 classSpanValue="radial-text"
                 spanValue={"de votre objectif"}
             />
-            <ResponsiveContainer width={"32%"} height={200}>
+            <ResponsiveContainer width={"100%"} height={200}>
                 <RadialBarChart
                     startAngle={-210}
                     endAngle={360}
-                    style={{background:"#FBFBFB"}}
                     cx="50%"
                     cy="50%"
                     innerRadius="70%"
@@ -45,11 +48,21 @@ export default function Score() {
                         cornerRadius={12}
                         dataKey="score"
                         fill="red"
-                        background
                     />
                     <PolarAngleAxis type="number" domain={[0, 100]}  tick={false} />
+                    <Customized component={
+                        ()=>{
+                            return <CustomLabel
+                                data={score +"%"}
+                                classWrapper="radial-wrapper"
+                                classValue="radial-results"
+                                classSpanValue="radial-text"
+                                spanValue={"de votre objectif"}
+                            />
+                        }}
+                    />
                 </RadialBarChart>
             </ResponsiveContainer>
-        </React.Fragment>
+        </div>
     )
 }

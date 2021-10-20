@@ -3,10 +3,12 @@ import Navbar from './Navbar/Navbar'
 import VerticalBar from './VerticalBar/VerticalBar'
 import Dashbord from './Dashbord/Dashbord'
 import Error from './Error/Error'
-
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-
+/**
+ * application root
+ * @component
+ */
 export default function App() {
     return (
         <React.Fragment>

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import React from 'react'
 import calories from './../../../assets/calories-icon.png'
 import protein from './../../../assets/protein-icon.png'
@@ -5,6 +6,11 @@ import carbs from './../../../assets/carbs-icon.png'
 import fat from './../../../assets/fat-icon.png'
 import './InfoCard.css'
 
+/**
+ * Card info nutrient
+ * @param {PropTypes} props 
+ * @component
+ */
 export default function InfoCard(props) {
 
     return (
@@ -21,4 +27,10 @@ export default function InfoCard(props) {
             </div>
         </div>
     )
+}
+
+InfoCard.PropTypes = {
+    id: PropTypes.any,
+    info: PropTypes.string,
+    weight: PropTypes.any
 }

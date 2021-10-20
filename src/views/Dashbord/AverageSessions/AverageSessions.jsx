@@ -3,6 +3,10 @@ import { Line, LineChart, ResponsiveContainer, Tooltip, XAxis } from 'recharts'
 import { userAverageSessionsInformation } from '../../../services/api'
 import './AverageSessions.css'
 
+/**
+ * aaverage session graph component
+ * @component
+ */
 export default function AverageSessions() {
     const [sessions, setSessions] = useState()
 
@@ -18,7 +22,7 @@ export default function AverageSessions() {
             <ResponsiveContainer width={"32%"} height={200}>
                 <LineChart
                     className="line-parent"
-                    style={{background:"red", borderRadius:"7px"}}
+                    style={{background:"red", borderRadius:"5px"}}
                     data={sessions}
                     cx="50%"
                     cy="50%"
