@@ -5,6 +5,8 @@ import './Activity.css'
 
 /**
  *  Activity graph component
+ * render a <Activity /> component
+ * a bar chart for activity
  * @component
  */
 export default function Activity() {

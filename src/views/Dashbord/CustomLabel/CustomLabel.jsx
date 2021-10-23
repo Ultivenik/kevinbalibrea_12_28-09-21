@@ -2,9 +2,10 @@ import PropTypes from "prop-types"
 import React from 'react'
 
 /**
- *
+ * render a <CustomLabel /> 
+ * a label customized for charts when the Recharts label don't work
  * @param {PropTypes} props
- * @returns 
+ * @component
  */
 export default function CustomLabel(props) {
     return (
@@ -17,7 +18,7 @@ export default function CustomLabel(props) {
     )
 }
 
-CustomLabel.PropTypes = {
+CustomLabel.propTypes = {
     classSpanValue: PropTypes.string,
     classValue: PropTypes.string,
     classWrapper: PropTypes.string,

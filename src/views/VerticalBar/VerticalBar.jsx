@@ -6,6 +6,12 @@ import swim from '../../assets/icon-swim.png'
 import bike from '../../assets/icon-bike.png'
 import { Link } from 'react-router-dom'
 
+/**
+ * a vertical bar for category of application
+ * render a <VerticalBar /> component 
+ * @component
+ */
+
 export default function VerticalBar() {
     const icons = [meditation, swim, bike, weight]
     const copyright = "Copyright, SportSee 2020"

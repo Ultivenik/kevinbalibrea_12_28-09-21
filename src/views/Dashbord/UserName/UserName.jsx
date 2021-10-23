@@ -5,15 +5,18 @@ import './Username.css'
 
 /**
  * component Title and user name
+ * renders a <UserName /> component
+ * an information component about the user name
  * @typedef PropTypes
  * @param {PropTypes} props
- * @returns {Component}
+ * @component
  */
 export default function UserName(props) {
     const [name, setName] = useState()
 
     useEffect(() => {
-        globalAccesUserInfo().then(response =>{
+        globalAccesUserInfo()
+        .then(response =>{
             setName(response.firstName)
         })
     }, [])
@@ -26,8 +29,8 @@ export default function UserName(props) {
     )
 }
 
-UserName.PropTypes = {
+UserName.propTypes = {
     congrats: PropTypes.string,
     emoji: PropTypes.any,
-    hello: PropTypes.string
+    hello: PropTypes.string,
 }

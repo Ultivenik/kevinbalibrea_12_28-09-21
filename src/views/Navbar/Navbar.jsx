@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.png'
 import './NavBar.css'
 
+/**
+ * render a <NavBar /> component
+ * a navbar for link of pages application
+ * @component
+ */
 export default function Navbar() {
     const links = ["Accueil", "Profil", "Réglage", "Communauté"]
     return (

@@ -7,6 +7,8 @@ import './Score.css'
 
 /**
  * radial bar score component
+ * render a <Score /> component
+ * a radial bar chart for total score of progression
  * @component
  */
 export default function Score() {

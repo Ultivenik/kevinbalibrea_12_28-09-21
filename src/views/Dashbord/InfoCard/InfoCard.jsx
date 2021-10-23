@@ -8,6 +8,8 @@ import './InfoCard.css'
 
 /**
  * Card info nutrient
+ * render a <InfoCard /> component
+ * an info card about calories, protein, carbs, or fat.
  * @param {PropTypes} props 
  * @component
  */
@@ -29,7 +31,7 @@ export default function InfoCard(props) {
     )
 }
 
-InfoCard.PropTypes = {
+InfoCard.propTypes = {
     id: PropTypes.any,
     info: PropTypes.string,
     weight: PropTypes.any

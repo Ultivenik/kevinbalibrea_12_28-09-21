@@ -4,7 +4,9 @@ import { userAverageSessionsInformation } from '../../../services/api'
 import './AverageSessions.css'
 
 /**
- * aaverage session graph component
+ * average session graph component
+ * render a <AverageSessions /> component
+ * a line chart component for average sessions
  * @component
  */
 export default function AverageSessions() {

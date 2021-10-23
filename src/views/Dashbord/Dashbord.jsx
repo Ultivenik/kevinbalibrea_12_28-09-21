@@ -10,9 +10,11 @@ import AverageSessions from './AverageSessions/AverageSessions'
 
 /**
  *  dashboard page component
+ * Renders a <Dashbord /> component
+ * Have <UserName />, <Activity />, <Intensity />, <Score /> and <InfoCard/> component as children
  * @component
  */
-export default function Dashboard() {
+export default function Dashbord() {
     const [foodInfo, setFoodInfo] = useState([])
 
     useEffect(() => {
