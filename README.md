@@ -28,9 +28,10 @@ First, use the `cd .\P9-front-end-dashboard\` (or just typing `cd .p9` and `tab`
 - The `docker container stop micro-api` command will allow you to stop your micro-api.
 - The `docker container rm micro-api` command will allow you to delete your micro-api container.
 
-### 2.4 VsCode and container
+### 2.4 Running project
 
-If you have VScode you can open two terminal.
+To running the project you have to open two terminal (you can do it with VScode IDE if you use it).
+
 - In the first, you can use the `cd .\P9-front-end-dashboard\` (or just typing `cd .p9` and `tab`), to be in the micro API file and run the `yarn dev` command to run the micro API
 - In the second one, use the `npm run start` command only to run the project. it will run in `localhost:3001`
 
