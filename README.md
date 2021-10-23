@@ -8,7 +8,7 @@ To use this project you have to use Docker to create a container project, run th
 
 ### 2.1 Setup the project
 
-- Fork the repository
+- Fork the project
 - Clone it on your computer.
 - The yarn or npm command will allow you to install the dependencies (yarn install or npm install).
 - The yarn dev command will allow you to run the micro API.
