@@ -1,0 +1,21 @@
+.error-wrapper{
+    display: flex;
+    margin: 4em auto;
+    width: 40%;
+    flex-direction: column;
+}
+.code-error{
+    text-align: center;
+    font-size: 10em;
+    color: red;
+}
+.error{
+    font-style: italic;
+    font-weight: bold;
+    margin: 3em auto;
+}
+.home-link{
+    text-align: center;
+    color: red;
+    text-decoration: underline;
+}

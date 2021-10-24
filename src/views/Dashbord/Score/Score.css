@@ -1,0 +1,49 @@
+.radial-container{
+    position: relative;
+    background:#FBFBFB;
+    width: 30%;
+    border-radius: 5px;
+}
+.radial-title{
+    position: absolute;
+    z-index: 1;
+    left: 11%;
+    top: 10%;
+    color:#20253A;
+    font-weight:500;
+    font-size:.8em
+}
+.radial-wrapper{
+    position: absolute;
+    /* left: 74.1%; */
+    right: 11.3%;
+    z-index: 10;
+    top: 17.8%;
+    width: 4em;
+    background: white;
+    border-radius: 50%;
+    padding: 1.9em;
+}
+.radial-results{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+.radial-text{
+    color: #74798C;
+    font-weight: 500;
+    font-size: .8em;
+    text-align: center;
+    line-height: 1.6;
+}
+
+@media screen and (min-width:1170px) {
+    .radial-wrapper{
+        right: 24%;
+    }
+}
+@media screen and (min-width:1500px) {
+    .radial-wrapper{
+        right: 32%;
+    }
+}

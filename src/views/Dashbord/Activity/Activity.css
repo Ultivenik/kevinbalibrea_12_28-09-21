@@ -1,0 +1,18 @@
+.barchart .recharts-surface:not(.recharts-legend-item .recharts-surface) {
+    width: 93%;
+    margin-left: 2em;
+}
+.barchart .recharts-legend-wrapper .recharts-default-legend .recharts-legend-item .recharts-legend-item-text{
+    color: #74798C !important;
+    margin-left: .7em;
+    font-size: .8em;
+}
+.activity-bar{
+    position: absolute;
+    z-index: 1;
+    left: 5%;
+    top: 3%;
+    color:#20253A;
+    font-weight:500;
+    font-size:.8em
+}

@@ -1,0 +1,26 @@
+.dashbord {
+    margin-left: 10em;
+}
+
+.stats{
+    position: relative;
+    width: 70%;
+    height: 30em;
+}
+
+.info-cards{
+    width: 27%;
+}
+.sessions{
+    display: flex;
+    margin-top: 4em;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.intensity-average-score-chart{
+    position: relative;
+    display: flex;
+    margin-top: 6.5em;
+    justify-content: space-between;
+    width: 100%;
+}
