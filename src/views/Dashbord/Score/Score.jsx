@@ -52,17 +52,6 @@ export default function Score() {
                         fill="red"
                     />
                     <PolarAngleAxis type="number" domain={[0, 100]}  tick={false} />
-                    <Customized component={
-                        ()=>{
-                            return <CustomLabel
-                                data={score +"%"}
-                                classWrapper="radial-wrapper"
-                                classValue="radial-results"
-                                classSpanValue="radial-text"
-                                spanValue={"de votre objectif"}
-                            />
-                        }}
-                    />
                 </RadialBarChart>
             </ResponsiveContainer>
         </div>
