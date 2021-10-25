@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react/cjs/react.development'
-import { Customized, PolarAngleAxis, RadialBar, RadialBarChart, ResponsiveContainer } from 'recharts'
+import {  PolarAngleAxis, RadialBar, RadialBarChart, ResponsiveContainer } from 'recharts'
 import { globalAccesUserInfo } from '../../../services/api'
 import CustomLabel from '../CustomLabel/CustomLabel'
 import './Score.css'
