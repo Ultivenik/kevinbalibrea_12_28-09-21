@@ -21,7 +21,7 @@ To use this project you have to use Docker to create a container project, run th
 
 ### 2.3 Starting the project
 
-First, use the `cd .\P9-front-end-dashboard\` (or just typing `cd .p9` and `tab`), to be in the micro API file and run the commands which follow.
+First, use the `cd .\P9-front-end-dashboard\` (or just typing `cd .p9` and `tab`), to be in the micro API file and after typing the command `yarn install` run the commands which follow.
 
 - The `docker image build --no-cache -t micro-api .` command will allow you to build your image.
 - The `docker container run --name micro-api -p 3000:3000 -dt micro-api yarn` command will allow you to create your Docker container and run your image on port 3000.

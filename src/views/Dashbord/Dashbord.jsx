@@ -22,6 +22,7 @@ export default function Dashbord() {
             setFoodInfo(response.nutrient)
         })
     }, [])
+
     return (
         <section className="dashbord">
             <UserName hello="Bonjour" congrats="Félicitation ! Vous avez explosé vos objectifs hier" emoji="👏"/>

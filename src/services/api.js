@@ -24,6 +24,7 @@ export const globalAccesUserInfo = async () => {
         ]
     }
 }
+
 /**
  * Call API function for activity datas
  * @async
@@ -34,7 +35,7 @@ export const userActivityInformation = async () => {
     const request = await axios.get("http://localhost:3000/user/12/activity")
     .catch(err => {
         if(err){
-            throw new Error("Error: Your request about informations activity user (day, kilogram, calories) cannot be found. Please verify the URL.")
+            throw new Error("Error: Your request about informations activity user(day, kilogram, calories) cannot be found. Please verify the URL.")
         }
     })
     const data = request.data.data.sessions

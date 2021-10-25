@@ -10,7 +10,7 @@ import './InfoCard.css'
  * Card info nutrient
  * render a <InfoCard /> component
  * an info card about calories, protein, carbs, or fat.
- * @param {PropTypes} props 
+ * @param {PropTypes} props
  * @component
  */
 export default function InfoCard(props) {

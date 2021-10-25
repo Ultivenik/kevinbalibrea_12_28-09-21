@@ -4,7 +4,7 @@ import { userPerformanceInformation } from '../../../services/api'
 
 /**
  * radar chart intensity component
- * render a <Intensity /> component
+    * render a <Intensity /> component
  * a radar chart component for intensity
  * @component
  */
